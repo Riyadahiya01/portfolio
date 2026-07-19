@@ -1,7 +1,5 @@
 <p align="center">
-
-<img src="https://raw.githubusercontent.com/Riyadahiya01/portfolio/main/public/github/portfolio-banner.png" alt="Riya Dahiya Portfolio Banner" width="100%" />
-
+  <img src="https://raw.githubusercontent.com/Riyadahiya01/portfolio/main/portfolio-banner.png" alt="Riya Dahiya Portfolio Banner" width="100%">
 </p>
 
 <h1 align="center">Riya Dahiya Portfolio</h1>

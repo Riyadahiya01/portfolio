@@ -78,6 +78,6 @@ Production-inspired Infrastructure as Code (IaC) project demonstrating automated
 If you'd like to discuss Cloud Engineering, AWS, Infrastructure as Code, or potential opportunities, feel free to connect.
 
 - 🌐 **Portfolio:** https://portfolio-website-pi-jet-97.vercel.app/
-- 💼 **LinkedIn:** https://www.linkedin.com/in/riya-dahiya-/
+- 💼 **LinkedIn:** www.linkedin.com/in/riya-dahiya-
 - 💻 **GitHub:** https://github.com/Riyadahiya01
 - 📧 **Email:** dahiyariya007@gmail.com

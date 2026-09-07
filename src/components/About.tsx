@@ -1,5 +1,67 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+import { CloudIcon } from "./Icons";
+
+function StatIcon({ type }: { type: string }) {
+  if (type === "cloud") {
+    return <CloudIcon className="h-5 w-5" />;
+  }
+
+  if (type === "projects") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5"
+        aria-hidden="true"
+      >
+        <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5z" />
+        <path d="M3 9h18" />
+      </svg>
+    );
+  }
+
+  if (type === "certifications") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="8" r="4.5" />
+        <path d="M9 12.2 8 21l3-1.5 3 1.5-1-8.8" />
+        <path d="M10.2 8h3.6" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+      aria-hidden="true"
+    >
+      <path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H19v17H7.5A2.5 2.5 0 0 0 5 21.5z" />
+      <path d="M5 4.5v17" />
+      <path d="M9 6h6" />
+      <path d="M9 9h6" />
+    </svg>
+  );
+}
 
 
 
@@ -83,10 +145,26 @@ description="Scientist by Training. Cloud Engineer by Choice."
   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
     {[
-  { icon: "☁️", value: "20+", label: "AWS Services" },
-  { icon: "📁", value: "5+", label: "Cloud Projects" },
-  { icon: "🏆", value: "4+", label: "Certifications" },
-  { icon: "📚", value: "500+", label: "Learning Hours" },
+  {
+    icon: "cloud",
+    value: "20+",
+    label: "AWS Services",
+  },
+  {
+    icon: "projects",
+    value: "5+",
+    label: "Cloud Projects",
+  },
+  {
+    icon: "certifications",
+    value: "4+",
+    label: "Certifications",
+  },
+  {
+    icon: "learning",
+    value: "500+",
+    label: "Learning Hours",
+  },
 ].map((item) => (
       <div
         key={item.label}
@@ -107,8 +185,25 @@ min-h-[130px]
         <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-sky-400/10 blur-2xl group-hover:bg-sky-400/25 transition duration-500" />
 
         <div className="relative z-10">
-          <div className="h-10 w-10 rounded-2xl glass flex items-center justify-center mb-3 text-lg">
-  {item.icon}
+         <div
+  className="
+    mb-3
+    flex
+    h-10
+    w-10
+    items-center
+    justify-center
+    rounded-2xl
+    border
+    border-white/10
+    bg-white/[0.035]
+    backdrop-blur-md
+  "
+  style={{
+    color: "var(--text-secondary)",
+  }}
+>
+  <StatIcon type={item.icon} />
 </div>
           <div
             className="text-3xl font-bold mb-2"

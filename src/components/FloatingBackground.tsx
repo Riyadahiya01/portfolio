@@ -107,7 +107,7 @@ const particles = useMemo(() => makeNodes(10, 99), []);
   return (
     <>
       <div className="aurora-bg" />
-      <div className="grid-overlay" />
+      
       <div className="pointer-events-none fixed inset-0 z-[1] overflow-hidden">
         {nodes.map((n) => (
           <motion.div

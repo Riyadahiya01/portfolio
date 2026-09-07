@@ -73,7 +73,7 @@ function getResponse(input: string): { text: string; suggestions?: string[] } {
   }
   if (/hire|available|contact|email|reach/.test(q)) {
     return {
-      text: `She's ${profile.availability.toLowerCase()}. Reach her at ${profile.email}, on LinkedIn (linkedin.com/in/riya-dahiya-cloud-tech) or use the "Hire Riya" form at the bottom of the page.`,
+      text: `She's ${profile.availability.toLowerCase()}. Reach her at ${profile.email}, on LinkedIn (linkedin.com/in/riya-dahiya-) or use the "Hire Riya" form at the bottom of the page.`,
       suggestions: ["Show recruiter dashboard", "Show resume", "Show certifications"],
     };
   }
@@ -127,29 +127,66 @@ export default function AIAssistant() {
   return (
     <>
    {/* Chat Assistant Trigger */}
+{/* Premium AI Assistant Trigger */}
 <motion.button
   onClick={() => setOpen(true)}
   initial={{ opacity: 0, scale: 0.9 }}
   animate={{ opacity: 1, scale: 1 }}
-  transition={{ delay: 1, duration: 0.4 }}
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
+  transition={{ delay: 1, duration: 0.5 }}
+  whileHover={{ scale: 1.05, y: -2 }}
+  whileTap={{ scale: 0.96 }}
   aria-label="Open AI Assistant"
+  title="Open AI Assistant"
   className={`fixed bottom-6 right-6 z-[60]
     ${open ? "hidden" : "flex"}
     h-14 w-14
     items-center justify-center
     rounded-full
-    glass-strong
     border border-white/10
-    shadow-lg shadow-sky-500/10`}
+    bg-white/[0.035]
+    backdrop-blur-xl
+    shadow-xl
+    shadow-sky-500/10
+    transition-all duration-300
+    hover:border-sky-400/30
+    hover:bg-white/[0.06]`}
 >
-  <span
-  className="text-xl"
-  style={{ color: "var(--text-primary)" }}
->
-  💬
-</span>
+  <div className="relative flex items-center justify-center">
+    {/* Subtle AI glow */}
+    <span
+      className="
+        absolute
+        h-9 w-9
+        rounded-full
+        bg-sky-400/20
+        blur-xl
+        opacity-60
+      "
+    />
+
+    {/* AI Core */}
+    <span
+      className="
+        relative
+        flex
+        h-10
+        w-10
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-white/10
+        bg-white/[0.04]
+        backdrop-blur-md
+        text-[10px]
+        font-semibold
+        tracking-[0.22em]
+      "
+      style={{ color: "var(--text-primary)" }}
+    >
+      AI
+    </span>
+  </div>
 </motion.button>
   
       <AnimatePresence>

@@ -10,14 +10,14 @@ export const socials: Social[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://linkedin.com/in/riya-dahiya-cloud-tech",
+    href: "https://www.linkedin.com/in/riya-dahiya-/",
     iconType: "linkedin",
     ariaLabel: "Visit Riya Dahiya on LinkedIn",
   },
   {
     id: "github",
     label: "GitHub",
-    href: "https://github.com/RD-Cloud-Tech",
+    href: "https://github.com/Riyadahiya01",
     iconType: "github",
     ariaLabel: "Visit Riya Dahiya on GitHub",
   },
